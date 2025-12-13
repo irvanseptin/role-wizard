@@ -1,0 +1,14 @@
+@import "@/styles/variables";
+
+.label {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-weight: $font-weight-medium;
+  color: $gray-700;
+  font-size: $font-base;
+
+  &__required {
+    color: $error-red;
+    margin-left: 2px;
+  }
+}
