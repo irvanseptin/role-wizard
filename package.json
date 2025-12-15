@@ -9,7 +9,9 @@
     "api1": "json-server --watch db-step1.json --port 4001",
     "api2": "json-server --watch db-step2.json --port 4002",
     "dev": "concurrently \"npm run api1\" \"npm run api2\" \"next dev\"",
-    "api:reset": "npm run api:reset1 && npm run api:reset2"
+    "api:reset": "npm run api:reset1 && npm run api:reset2",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "json-server": "^1.0.0-beta.3",
@@ -20,12 +22,21 @@
     "sass": "^1.96.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
-    "typescript": "^5"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

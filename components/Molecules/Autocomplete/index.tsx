@@ -1,11 +1,12 @@
 import React, { useState, useRef } from "react";
 import Input from "@/components/atoms/Input";
 import Icon from "@/components/atoms/Icon";
+import { Department, Location } from "@/types/index";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import { AutocompleteProps } from "./interface";
 import "./styles.scss";
 
-export const Autocomplete: React.FC<AutocompleteProps> = ({
+const Autocomplete: React.FC<AutocompleteProps> = ({
   value,
   onChange,
   placeholder,
@@ -13,7 +14,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
   disabled = false,
   error = false,
 }) => {
-  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [suggestions, setSuggestions] = useState<Location[] | Department[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -42,7 +43,7 @@ export const Autocomplete: React.FC<AutocompleteProps> = ({
     }
   };
 
-  const handleSelect = (suggestion: any) => {
+  const handleSelect = (suggestion: Location | Department) => {
     onChange(suggestion.name);
     setIsOpen(false);
   };

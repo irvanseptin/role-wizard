@@ -17,12 +17,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       return (
         <div className="input-wrapper">
           <span className="input-icon">{leftIcon}</span>
-          <input ref={ref} className={classes} {...props} />
+          <input data-testid="input" ref={ref} className={classes} {...props} />
         </div>
       );
     }
 
-    return <input ref={ref} className={classes} {...props} />;
+    return (
+      <input data-testid="input" ref={ref} className={classes} {...props} />
+    );
   }
 );
 
