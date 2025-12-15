@@ -13,3 +13,5 @@ export const Badge: React.FC<BadgeProps> = ({
 
   return <span className={classes}>{children}</span>;
 };
+
+export default Badge;
