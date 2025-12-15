@@ -1,0 +1,43 @@
+@use "@/styles/variables" as *;
+
+.stepper-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+
+  &__number {
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $gray-200;
+    color: $gray-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: $font-weight-semibold;
+    transition: all $transition-slow;
+    flex-shrink: 0;
+  }
+
+  &__label {
+    font-size: $font-base;
+    color: $gray-500;
+    font-weight: $font-weight-medium;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &--active {
+    .stepper-item__number {
+      background: $primary-blue;
+      color: $white;
+    }
+
+    .stepper-item__label {
+      color: $gray-700;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}

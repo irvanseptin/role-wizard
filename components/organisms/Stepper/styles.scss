@@ -1,0 +1,23 @@
+@use "@/styles/variables" as *;
+
+.stepper {
+  display: flex;
+  align-items: center;
+  padding: $spacing-3xl;
+  background: $gray-50;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-xl;
+  }
+
+  &__line {
+    flex: 1;
+    height: 2px;
+    background: $gray-200;
+    margin: 0 $spacing-lg;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin: 0 $spacing-sm;
+    }
+  }
+}
