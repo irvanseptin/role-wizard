@@ -8,7 +8,8 @@
     "lint": "eslint",
     "api1": "json-server --watch db-step1.json --port 4001",
     "api2": "json-server --watch db-step2.json --port 4002",
-    "dev": "concurrently \"npm run api1\" \"npm run api2\" \"next dev\"",
+    "run-api": "concurrently \"npm run api1\" \"npm run api2\"",
+    "dev": "concurrently \"run-api\" \"next dev\"",
     "api:reset": "npm run api:reset1 && npm run api:reset2",
     "test": "jest",
     "test:watch": "jest --watch"

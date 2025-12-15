@@ -5,16 +5,9 @@ import { useRouter } from "next/navigation";
 import PageLayout from "@/components/templates/PageLayout";
 import RoleCard from "@/components/molecules/RoleCard";
 import Button from "@/components/atoms/Button";
-import { UserRole } from "@/types/index";
 import "./styles.scss";
 
-interface RoleSelectionPageProps {
-  onSelectRole: (role: UserRole) => void;
-}
-
-export const RoleSelectionPage: React.FC<RoleSelectionPageProps> = ({
-  onSelectRole,
-}) => {
+export const RoleSelectionPage: React.FC = () => {
   const router = useRouter();
   return (
     <PageLayout maxWidth="sm">

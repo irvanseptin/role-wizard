@@ -1,14 +1,10 @@
 import { Department, Location } from "@/types/index";
 
-// JSON Server endpoints
-const API_BASE_1 = "http://localhost:4001";
-const API_BASE_2 = "http://localhost:4002";
-
 export const fetchDepartments = async (
   query: string
 ): Promise<Department[]> => {
   try {
-    const response = await fetch(`${API_BASE_1}/departments`);
+    const response = await fetch("/api/departments");
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -30,7 +26,7 @@ export const fetchDepartments = async (
 
 export const fetchLocations = async (query: string): Promise<Location[]> => {
   try {
-    const response = await fetch(`${API_BASE_2}/locations`);
+    const response = await fetch("/api/locations");
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -55,7 +51,7 @@ export const submitBasicInfo = async (data: any): Promise<any> => {
     // Simulate delay for demo
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    const response = await fetch(`${API_BASE_1}/basicInfo`, {
+    const response = await fetch("/api/basicInfo", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -79,7 +75,7 @@ export const submitDetails = async (data: any): Promise<any> => {
     // Simulate delay for demo
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    const response = await fetch(`${API_BASE_2}/details`, {
+    const response = await fetch("/api/details", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,7 +97,7 @@ export const submitDetails = async (data: any): Promise<any> => {
 export const fetchBasicInfo = async (page: number = 1, limit: number = 10) => {
   try {
     const response = await fetch(
-      `${API_BASE_1}/basicInfo?_page=${page}&_limit=${limit}`
+      `/api/basicInfo?_page=${page}&_limit=${limit}`
     );
 
     if (!response.ok) {
@@ -123,9 +119,7 @@ export const fetchBasicInfo = async (page: number = 1, limit: number = 10) => {
 
 export const fetchDetails = async (page: number = 1, limit: number = 10) => {
   try {
-    const response = await fetch(
-      `${API_BASE_2}/details?_page=${page}&_limit=${limit}`
-    );
+    const response = await fetch(`/api/details?_page=${page}&_limit=${limit}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -146,7 +140,7 @@ export const fetchDetails = async (page: number = 1, limit: number = 10) => {
 
 export const getBasicInfoById = async (id: number) => {
   try {
-    const response = await fetch(`${API_BASE_1}/basicInfo/${id}`);
+    const response = await fetch(`/api/basicInfo/${id}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -161,7 +155,7 @@ export const getBasicInfoById = async (id: number) => {
 
 export const getDetailsById = async (id: number) => {
   try {
-    const response = await fetch(`${API_BASE_2}/details/${id}`);
+    const response = await fetch(`/api/details/${id}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
