@@ -1,0 +1,30 @@
+@import "@/styles/variables";
+
+.page-layout {
+  min-height: 100vh;
+  padding: $spacing-xl;
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-md;
+  }
+
+  &__container {
+    margin: 0 auto;
+
+    &--sm {
+      max-width: 600px;
+    }
+
+    &--md {
+      max-width: 800px;
+    }
+
+    &--lg {
+      max-width: 1000px;
+    }
+
+    &--xl {
+      max-width: 1200px;
+    }
+  }
+}
