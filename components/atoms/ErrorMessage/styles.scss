@@ -1,8 +1,0 @@
-@use "@/styles/variables" as *;
-
-.error-message {
-  display: block;
-  margin-top: $spacing-xs;
-  font-size: $font-sm;
-  color: $error-red;
-}
