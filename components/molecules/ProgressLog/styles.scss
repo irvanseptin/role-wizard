@@ -1,0 +1,20 @@
+@use "@/styles/variables" as *;
+
+.progress-log {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background: $gray-50;
+  border-radius: $radius-md;
+
+  &__icon {
+    font-size: $font-lg;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    font-size: $font-base;
+    color: $gray-700;
+  }
+}
