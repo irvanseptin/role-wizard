@@ -1,0 +1,24 @@
+@use "@/styles/variables" as *;
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-3xl;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    gap: $spacing-lg;
+    align-items: stretch;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: $font-3xl;
+    color: $gray-800;
+    margin: 0;
+  }
+}

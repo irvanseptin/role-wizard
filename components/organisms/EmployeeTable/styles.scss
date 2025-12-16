@@ -1,0 +1,86 @@
+@use "@/styles/variables" as *;
+
+.employee-table {
+  background: $white;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-sm;
+  overflow: hidden;
+
+  &__empty {
+    text-align: center;
+    color: $gray-400;
+    padding: $spacing-4xl;
+    font-size: $font-base;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      background: $gray-50;
+      padding: $spacing-lg;
+      text-align: left;
+      font-weight: $font-weight-semibold;
+      font-size: $font-sm;
+      color: $gray-600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid $gray-200;
+    }
+
+    td {
+      padding: $spacing-lg;
+      border-bottom: 1px solid $gray-200;
+      font-size: $font-base;
+      color: $gray-700;
+    }
+
+    tbody tr {
+      transition: background $transition-fast;
+
+      &:last-child td {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: $gray-50;
+      }
+    }
+  }
+
+  &__photo {
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-md;
+    object-fit: cover;
+  }
+
+  &__photo-placeholder {
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-md;
+    background: $gray-200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray-400;
+  }
+
+  &__id {
+    background: $gray-100;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: $font-xs;
+    font-family: "Monaco", "Courier New", monospace;
+    color: $gray-700;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    overflow-x: auto;
+
+    &__table {
+      min-width: 600px;
+    }
+  }
+}
