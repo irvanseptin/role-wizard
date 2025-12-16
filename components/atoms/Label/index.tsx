@@ -16,4 +16,4 @@ export const Label: React.FC<LabelProps> = ({
   );
 };
 
-export default Label;
+export * from "./interface";

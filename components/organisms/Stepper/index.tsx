@@ -1,5 +1,5 @@
 import React from "react";
-import StepperItem from "@/components/molecules/StepperItem";
+import { StepperItem } from "@/components";
 import { StepperProps } from "./interface";
 import "./styles.scss";
 
@@ -20,4 +20,4 @@ export const Stepper: React.FC<StepperProps> = ({ currentStep, steps }) => {
   );
 };
 
-export default Stepper;
+export * from "./interface";

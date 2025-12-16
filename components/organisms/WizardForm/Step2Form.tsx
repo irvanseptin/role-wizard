@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import FormField from "@/components/molecules/FormField";
-import Select from "@/components/atoms/Select";
-import TextArea from "@/components/atoms/Textarea";
-import Autocomplete from "@/components/molecules/Autocomplete";
-import FileUpload from "@/components/molecules/FileUpload";
-import Button from "@/components/atoms/Button";
+import {
+  FormField,
+  Select,
+  TextArea,
+  Autocomplete,
+  FileUpload,
+  Button,
+} from "@/components";
 import { Step2FormProps } from "./interface";
 import { validateStep2, ValidationErrors } from "@/utils/validation";
 import { fetchLocations } from "@/services/api";
@@ -92,5 +94,3 @@ export const Step2Form: React.FC<Step2FormProps> = ({
     </div>
   );
 };
-
-export default Step2Form;

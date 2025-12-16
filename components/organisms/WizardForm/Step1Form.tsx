@@ -1,11 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import FormField from "@/components/molecules/FormField";
-import Input from "@/components/atoms/Input";
-import Select from "@/components/atoms/Select";
-import Autocomplete from "@/components/molecules/Autocomplete";
-import Button from "@/components/atoms/Button";
+import { FormField, Input, Select, Autocomplete, Button } from "@/components";
 import { FormData } from "@/types/index";
 import { validateStep1, ValidationErrors } from "@/utils/validation";
 import { generateEmployeeId } from "@/utils/helpers";
@@ -122,5 +118,3 @@ export const Step1Form: React.FC<Step1FormProps> = ({
     </div>
   );
 };
-
-export default Step1Form;

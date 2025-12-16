@@ -1,6 +1,6 @@
 import React from "react";
 import { ProgressLogProps } from "@/components/molecules/ProgressLog/interface";
-import ProgressLog from "@/components/molecules/ProgressLog";
+import { ProgressLog } from "@/components";
 import "./styles.scss";
 
 interface ProgressModalProps {
@@ -21,5 +21,3 @@ export const ProgressModal: React.FC<ProgressModalProps> = ({ logs }) => {
     </div>
   );
 };
-
-export default ProgressModal;

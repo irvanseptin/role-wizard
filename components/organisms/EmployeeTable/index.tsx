@@ -56,4 +56,4 @@ export const EmployeeTable: React.FC<EmployeeTableProps> = ({ employees }) => {
   );
 };
 
-export default EmployeeTable;
+export * from "./interface";

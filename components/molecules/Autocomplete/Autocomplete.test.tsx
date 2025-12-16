@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import Autocomplete from "./index";
+import { Autocomplete } from "./index";
 
 jest.mock("../../../hooks/useClickOutside", () => ({
   useClickOutside: jest.fn(),

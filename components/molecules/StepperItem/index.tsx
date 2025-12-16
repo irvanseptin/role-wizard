@@ -15,4 +15,4 @@ export const StepperItem: React.FC<StepperItemProps> = ({
   );
 };
 
-export default StepperItem;
+export * from "./interface";

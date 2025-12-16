@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "@/components/atoms/Icon";
+import { Icon } from "@/components/atoms";
 import { PhotoPreviewProps } from "./interface";
 import "./styles.scss";
 
@@ -23,4 +23,4 @@ export const PhotoPreview: React.FC<PhotoPreviewProps> = ({
   );
 };
 
-export default PhotoPreview;
+export * from "./interface";

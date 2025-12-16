@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Icon from "@/components/atoms/Icon";
-import PhotoPreview from "@/components/molecules/PhotoPreview";
+import { Icon, PhotoPreview } from "@/components";
 import { FileUploadProps } from "./interface";
 import { convertToBase64 } from "@/utils/helpers";
 import "./styles.scss";
@@ -55,4 +54,4 @@ export const FileUpload: React.FC<FileUploadProps> = ({ value, onChange }) => {
   );
 };
 
-export default FileUpload;
+export * from "./interface";

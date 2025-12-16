@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import PageLayout from "@/components/templates/PageLayout";
-import PageHeader from "@/components/organisms/PageHeader";
-import EmployeeTable from "@/components/organisms/EmployeeTable";
-import Pagination from "@/components/molecules/Pagination";
-import Icon from "@/components/atoms/Icon";
+import {
+  PageLayout,
+  PageHeader,
+  EmployeeTable,
+  Pagination,
+  Icon,
+} from "@/components";
 import { Employee } from "@/types/index";
 import { getEmployees } from "@/services/storage";
 

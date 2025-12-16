@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import WizardLayout from "@/components/templates/WizardLayout";
-import Stepper from "@/components/organisms/Stepper";
-import Step1Form from "@/components/organisms/WizardForm/Step1Form";
-import Step2Form from "@/components/organisms/WizardForm/Step2Form";
-import ProgressModal from "@/components/organisms/ProgressModal";
+import {
+  WizardLayout,
+  Stepper,
+  Step1Form,
+  Step2Form,
+  ProgressModal,
+} from "@/components";
 import { FormData, UserRole, ProgressLog } from "@/types/index";
 import { useAutoSave } from "@/hooks/useAutoSave";
 import {

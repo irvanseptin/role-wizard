@@ -15,4 +15,4 @@ export const RoleCard: React.FC<RoleCardProps> = ({
   );
 };
 
-export default RoleCard;
+export * from "./interface";

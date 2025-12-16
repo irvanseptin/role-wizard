@@ -11,4 +11,4 @@ export const ProgressLog: React.FC<ProgressLogProps> = ({ icon, text }) => {
   );
 };
 
-export default ProgressLog;
+export * from "./interface";

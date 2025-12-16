@@ -2,9 +2,7 @@
 
 import React from "react";
 import { useRouter } from "next/navigation";
-import PageLayout from "@/components/templates/PageLayout";
-import RoleCard from "@/components/molecules/RoleCard";
-import Button from "@/components/atoms/Button";
+import { PageLayout, RoleCard, Button } from "@/components";
 import "./styles.scss";
 
 export const RoleSelectionPage: React.FC = () => {

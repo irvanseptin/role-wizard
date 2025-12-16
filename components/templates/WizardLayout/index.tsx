@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Badge from "@/components/atoms/Badge";
-import Button from "@/components/atoms/Button";
+import { Badge, Button } from "@/components";
 import { WizardLayoutProps } from "./interface";
 import "./styles.scss";
 
@@ -36,4 +35,4 @@ export const WizardLayout: React.FC<WizardLayoutProps> = ({
   );
 };
 
-export default WizardLayout;
+export * from "./interface";

@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
-import Input from "@/components/atoms/Input";
-import Icon from "@/components/atoms/Icon";
+import { Input, Icon, AutocompleteProps } from "@/components";
 import { Department, Location } from "@/types/index";
 import { useClickOutside } from "@/hooks/useClickOutside";
-import { AutocompleteProps } from "./interface";
 import "./styles.scss";
 
-const Autocomplete: React.FC<AutocompleteProps> = ({
+export const Autocomplete: React.FC<AutocompleteProps> = ({
   value,
   onChange,
   placeholder,
@@ -86,4 +84,4 @@ const Autocomplete: React.FC<AutocompleteProps> = ({
   );
 };
 
-export default Autocomplete;
+export * from "./interface";

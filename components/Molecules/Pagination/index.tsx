@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "@/components/atoms/Button";
-import Icon from "@/components/atoms/Icon";
+import { Button, Icon } from "@/components";
 import { PaginationProps } from "./interface";
 import "./styles.scss";
 
@@ -34,4 +33,4 @@ export const Pagination: React.FC<PaginationProps> = ({
   );
 };
 
-export default Pagination;
+export * from "./interface";

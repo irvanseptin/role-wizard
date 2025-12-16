@@ -1,6 +1,5 @@
 import React from "react";
-import Label from "@/components/atoms/Label";
-import ErrorMessage from "@/components/atoms/ErrorMessage";
+import { Label, ErrorMessage } from "@/components";
 import { FormFieldProps } from "./interface";
 import "./styles.scss";
 
@@ -22,4 +21,4 @@ export const FormField: React.FC<FormFieldProps> = ({
   );
 };
 
-export default FormField;
+export * from "./interface";

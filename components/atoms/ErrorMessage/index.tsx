@@ -11,4 +11,4 @@ export const ErrorMessage: React.FC<ErrorMessageProps> = ({
   return <span className={`error-message ${className}`}>{children}</span>;
 };
 
-export default ErrorMessage;
+export * from "./interface";

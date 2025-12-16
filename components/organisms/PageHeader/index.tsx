@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@/components/atoms/Button";
+import { Button } from "@/components";
 import { PageHeaderProps } from "./interface";
 import "./styles.scss";
 
@@ -17,4 +17,4 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ title, action }) => {
   );
 };
 
-export default PageHeader;
+export * from "./interface";
